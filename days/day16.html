@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>День 16</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+      body {
+        background: url("../assets/img/day16.jpg") center/cover fixed;
+        min-height: 100vh;
+        color: white;
+      }
+
+      .card-appear {
+        backdrop-filter: blur(6px);
+        background: rgba(0, 0, 0, 0.45);
+        padding: 35px;
+        border-radius: 15px;
+        animation: fadeUp 0.9s ease;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      #pugMsg {
+        min-height: 120px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container py-5">
+      <div class="card-appear text-center">
+        <h1 class="mb-4">🐶 День 16 — Мопс-комплиментатор</h1>
+
+        <p class="fs-4">Комплимент дня тебе передали лично… ну, почти лично 😄</p>
+
+        <img src="../assets/img/mops.png" alt="pug" style="width: 150px; margin: 20px auto; display: block" />
+
+        <div id="pugMsg" class="fs-3 mt-3 mb-4"></div>
+
+        <button onclick="genPug()" class="btn btn-warning btn-lg">Получить комплимент 🐾</button>
+      </div>
+    </div>
+
+    <div class="text-center mt-4 mb-4">
+      <a href="../index.html" class="btn btn-light btn-lg">Назад к календарю</a>
+    </div>
+
+    <script>
+      const compliments = [
+        "Мопс ворчал… но ворчал потому, что ты слишком милая... когда не сгоняешь с себя",
+        "Сказал передать: «Ты лучшая!» — и хвостом вилял, между прочим.",
+        "Если бы у мопсов была королева… это была бы ты. Тоже ж свинота та еще 😏",
+        "Ты такая тёплая, что даже я ревную к этому пушистому засранцу.",
+        "Ты вызываешь желание свернуться клубочком и лечь рядом. Даже у мопса. У меня — тем более.",
+      ];
+
+      function genPug() {
+        document.getElementById("pugMsg").innerHTML = compliments[Math.floor(Math.random() * compliments.length)];
+      }
+    </script>
+  </body>
+</html>

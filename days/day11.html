@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>День 11</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+      body {
+        background: url("../assets/img/day11.jpg") center/cover fixed;
+        min-height: 100vh;
+        color: white;
+      }
+
+      .card-appear {
+        backdrop-filter: blur(6px);
+        background: rgba(0, 0, 0, 0.45);
+        padding: 35px;
+        border-radius: 15px;
+        animation: fadeUp 0.9s ease;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container py-5">
+      <div class="card-appear">
+        <h1 class="text-center mb-4">🎯 День 11 — Миссия дня</h1>
+
+        <p class="fs-4">Сегодня я даю тебе маленькое задание.</p>
+
+        <p class="fs-4">
+          📸 <strong>Сделай фото чего-нибудь уютного вокруг тебя</strong>
+          (кофе, мопс, плед, ты — самое уютное, если что 😉).
+        </p>
+
+        <p class="fs-4">И пришли мне. Я составлю по нему твой «персональный прогноз настроения».</p>
+        <p class="fs-4">if(photo.name !== 'mySweetGirl') return 'Не то сфоткала, я жду тебя!'</p>
+        <p class="fs-4">Ой, и как код попал сюда...</p>
+        <p class="fs-5 mt-3 fst-italic">*Миссия несложная. Дедлайн - сегодня вечером! Приоритет - ASAP.*</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-4 mb-4">
+      <a href="../index.html" class="btn btn-light btn-lg">Назад к календарю</a>
+    </div>
+  </body>
+</html>

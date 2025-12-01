@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>День 8</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+      body {
+        background: url("../assets/img/day8.jpg") center/cover fixed;
+        min-height: 100vh;
+        color: white;
+      }
+      .glass {
+        backdrop-filter: blur(7px);
+        background: rgba(0, 0, 0, 0.45);
+        padding: 35px;
+        border-radius: 15px;
+      }
+      #loveText {
+        min-height: 120px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container py-5">
+      <div class="glass">
+        <h1 class="text-center mb-4">🔮 День 8 — Гороскоп любви</h1>
+
+        <div id="loveText" class="fs-4 text-center mb-4"></div>
+
+        <div class="text-center">
+          <button onclick="genLove()" class="btn btn-warning btn-lg">Узнать своё предсказание ✨</button>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="../index.html" class="btn btn-light btn-lg">Назад к календарю</a>
+    </div>
+    <script>
+      const preds = [
+        "Сегодня тебя будет окружать любовь. Источник: я.",
+        "Тебе стоит ждать приятное сообщение. Подсказка: оно начинается на «я» и заканчивается на «люблю тебя».",
+        "Звёзды говорят: ты — счастье для одного конкретного человека. И ты знаешь, какого 😉",
+        "Если сегодня увидишь что-то милое — знай, это знак написать мне❤️",
+        "Твоё притяжение сегодня на максимуме. Берегись комплиментов.",
+      ];
+
+      function genLove() {
+        document.getElementById("loveText").innerHTML = preds[Math.floor(Math.random() * preds.length)];
+      }
+    </script>
+  </body>
+</html>

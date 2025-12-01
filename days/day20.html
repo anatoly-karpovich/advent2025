@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>День 20</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+      body {
+        background: url("../assets/img/day20.jpg") center/cover fixed;
+        min-height: 100vh;
+        color: white;
+      }
+
+      .card-appear {
+        backdrop-filter: blur(6px);
+        background: rgba(0, 0, 0, 0.45);
+        padding: 35px;
+        border-radius: 15px;
+        animation: fadeUp 0.9s ease;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      #result {
+        min-height: 160px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container py-5">
+      <div class="card-appear text-center">
+        <h1 class="mb-4">🎁 День 20 — Рулетка твоих желаний</h1>
+
+        <p class="fs-4">
+          Нажми на кнопку — и выбери, что я должен сделать для тебя 😏
+          <span class="fs-6">(да, я подписываюсь под всеми вариантами)</span>
+        </p>
+
+        <div id="result" class="fs-4 mt-4 mb-4"></div>
+
+        <button onclick="spin()" class="btn btn-warning btn-lg">Крутить рулетку 💫</button>
+      </div>
+    </div>
+
+    <div class="text-center mt-4 mb-4">
+      <a href="../index.html" class="btn btn-light btn-lg">Назад к календарю</a>
+    </div>
+
+    <script>
+      const tasks = [
+        "Ты выбираешь фильм, который мы посмотрим вместе — и я не спорю, даже если это мелодрама 😄",
+        "Ты выбираешь фото меня, которое я должен тебе отправить. Любое. Да, даже такое.",
+        "Ты выбираешь, что я тебе скажу самым тёплым тоном, чтобы растопить твою душу.",
+        "Ты выбираешь, о чём будет наше следующее утро — разговор, голосовое, план, фантазии.",
+        "Ты выбираешь, какой факт о тебе я должен сказать в голосовом.",
+        "Ты выбираешь вопрос, на который я обязан ответить честно. Любой.",
+      ];
+
+      const bonus = "🎁 БОНУС: Ты можешь загадать желание. Любое. И я выполню. (да, это прямой контракт 😏)";
+
+      function spin() {
+        const randomTask = tasks[Math.floor(Math.random() * tasks.length)];
+        document.getElementById("result").innerHTML = randomTask + "<br><br><strong>" + bonus + "</strong>";
+      }
+    </script>
+  </body>
+</html>

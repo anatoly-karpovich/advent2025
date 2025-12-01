@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>День 15</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+      body {
+        background: url("../assets/img/day15.jpg") center/cover fixed;
+        min-height: 100vh;
+        color: white;
+      }
+
+      .card-appear {
+        backdrop-filter: blur(6px);
+        background: rgba(0, 0, 0, 0.45);
+        padding: 35px;
+        border-radius: 15px;
+        animation: fadeUp 0.9s ease;
+      }
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      ul {
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container py-5">
+      <div class="card-appear">
+        <h1 class="text-center mb-4">🌍 День 15 — Наши будущие путешествия</h1>
+
+        <p class="fs-4">
+          Вот список мест, куда я хочу поехать с тобой. И да, ты будешь решать, что скушаем там первым — я доверяю
+          твоему вкусу 😉 НЕ ЕСТЬ - это же прекраснейший выбор!
+        </p>
+
+        <ul class="mt-4">
+          <li><strong>Италия</strong> — паста, вино и ты. И всё, мне достаточно.</li>
+          <li>
+            <strong>Исландия</strong> — северное сияние + твои глаза = конкуренция жестокая. Жаль этого в небе
+            добряка...
+          </li>
+          <li>
+            <strong>Испания</strong> — Если ты разозлишься, не удивляйся что рядом появится тореадор с красной тряпкой
+            😄
+          </li>
+          <li><strong>Грузия</strong> — хинкали, вино и обнимашки. Идеальный набор.</li>
+          <li><strong>Где угодно</strong> — если ты рядом.</li>
+        </ul>
+
+        <p class="fs-5 mt-4">
+          Будущее путешествие №1:
+          <strong>когда ты будешь готова — поехали куда захочешь. Например в ЗАГС</strong>
+        </p>
+      </div>
+    </div>
+
+    <div class="text-center mt-4 mb-4">
+      <a href="../index.html" class="btn btn-light btn-lg">Назад к календарю</a>
+    </div>
+  </body>
+</html>

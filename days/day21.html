@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>День 21</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+      body {
+        background: url("../assets/img/day21.jpg") center/cover fixed;
+        min-height: 100vh;
+        color: white;
+      }
+      .card-appear {
+        backdrop-filter: blur(6px);
+        background: rgba(0, 0, 0, 0.45);
+        padding: 35px;
+        border-radius: 15px;
+        animation: fadeUp 0.9s ease;
+      }
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container py-5">
+      <div class="card-appear">
+        <h1 class="text-center mb-4">💭 День 21 — Если бы ты была рядом</h1>
+
+        <p class="fs-4">Если бы ты была рядом сегодня…</p>
+
+        <ul class="fs-4">
+          <li>мы бы пили кофе, и ты бы опять делала глотки в 10 раз меньше моих;</li>
+          <li>я бы держал тебя за талию просто так — потому что могу;</li>
+          <li>мы бы смотрели какой-нибудь фильм и обсуждали его больше, чем смотрели;</li>
+          <li>мопс бы ревновал, но тут уж он смирился бы;</li>
+          <li>и ты бы лежала на мне — и всё. Мне больше ничего не надо.</li>
+        </ul>
+
+        <p class="fs-5 mt-3">Иногда близость измеряется не километрами, а ощущениями. И ты — очень рядом.</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-4 mb-4">
+      <a href="../index.html" class="btn btn-light btn-lg">Назад к календарю</a>
+    </div>
+  </body>
+</html>

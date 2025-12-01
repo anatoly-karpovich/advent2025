@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>День 19</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+      body {
+        background: url("../assets/img/day19.jpg") center/cover fixed;
+        min-height: 100vh;
+        color: white;
+      }
+
+      .card-appear {
+        backdrop-filter: blur(6px);
+        background: rgba(0, 0, 0, 0.45);
+        padding: 35px;
+        border-radius: 15px;
+        animation: fadeUp 0.9s ease;
+      }
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container py-5">
+      <div class="card-appear">
+        <h1 class="text-center mb-4">📷 День 19 — Фото-воспоминание</h1>
+
+        <p class="fs-4">Если бы у нас был общий фотоальбом, я бы туда положил:</p>
+
+        <ul class="fs-4 mt-3">
+          <li>Твоё забавное лицо, когда ты чем-то удивлена</li>
+          <li>Твои руки обнимающие меня за шею. И НЕ пытающиеся душить меня</li>
+          <li>Мопса, который по жизни не понимает, что происходит</li>
+          <li>И тебя. Всю тебя. Красивую, живую, настоящую.</li>
+        </ul>
+
+        <p class="fs-5 mt-3">
+          Знаешь, чего не хватает этому альбому? Наших фото вместе. И да — это прозрачный намёк 😘
+        </p>
+      </div>
+    </div>
+
+    <div class="text-center mt-4 mb-4">
+      <a href="../index.html" class="btn btn-light btn-lg">Назад к календарю</a>
+    </div>
+  </body>
+</html>

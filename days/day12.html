@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>День 5</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+      body {
+        background: url("../assets/img/day5.jpg") center/cover fixed;
+        min-height: 100vh;
+        color: white;
+      }
+      .oracle {
+        backdrop-filter: blur(6px);
+        background: rgba(0, 0, 0, 0.45);
+        padding: 35px;
+        border-radius: 15px;
+        animation: fade 1.2s ease;
+      }
+      #prediction {
+        font-size: 1.8rem;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container py-5">
+      <div class="oracle">
+        <h1 class="text-center mb-4">🐶 День 5 — Мопсофортуна</h1>
+
+        <p id="prediction" class="text-center"></p>
+
+        <div class="text-center mt-4">
+          <button onclick="generate()" class="btn btn-warning btn-lg">Получить совет от мопса 🐾</button>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="../index.html" class="btn btn-light btn-lg">Назад к календарю</a>
+    </div>
+    <script>
+      const predictions = [
+        "Сегодня тебе повезёт! Мопс уже так сказал.",
+        "Лучший способ пережить день — подумать обо мне (и о Толе, но не долго, а то забудешь меня покормить).",
+        "Улыбнись. Сейчас. Да-да. Вот так — идеально ❤️",
+        "Если хочешь приятный день — просто покорми меня.",
+        "Мопс утверждает: ты сегодня особенно красивая. Либо подлизывается, ибо хочет покушать, тут конечно непонятно.",
+      ];
+
+      function generate() {
+        document.getElementById("prediction").innerHTML = predictions[Math.floor(Math.random() * predictions.length)];
+      }
+    </script>
+  </body>
+</html>

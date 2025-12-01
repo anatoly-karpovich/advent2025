@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Адвент-календарь</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <style>
+      body {
+        background: url("https://images.unsplash.com/photo-1482517967863-00e15c9b44be") center/cover fixed;
+        min-height: 100vh;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="bg-christmas" style="background: url('assets/img/main.jpg') center/cover fixed">
+    <div class="container py-5">
+      <h1 class="text-center text-white mb-4">🎄 Адвент-календарь для моей любимой 🎁</h1>
+      <div class="card bg-dark bg-opacity-50 p-4 mb-4 text-white">
+        <p class="fs-4">
+          Привет, моя невероятная девочка 💛 Сегодня начинается декабрь, и я хочу подарить тебе особый месяц — тёплый,
+          уютный и полный маленьких чудес.
+        </p>
+
+        <p class="fs-4">
+          Каждый день здесь будет ждать что-то новое. Немного любви, немного магии, немного юмора — в моём исполнении 😄
+          Пусть в этом месяце хотя бы так, но ты ощутишь мое присутствие рядом ✨
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Генерируем 24 коробки -->
+        <script>
+          for (let i = 1; i <= 24; i++) {
+            document.write(`
+                    <div class="col-6 col-md-3">
+                        <div class="gift-box" data-day="${i}">
+                            <div class="gift-lid"></div>
+                            <div class="gift-body">${i}</div>
+                        </div>
+                    </div>
+                `);
+          }
+        </script>
+      </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

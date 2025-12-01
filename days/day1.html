@@ -12,18 +12,17 @@
       }
 
       .glow-card {
-        animation: glow 2.5s infinite ease-in-out;
+        animation: fade 1.2s ease;
       }
 
-      @keyframes glow {
-        0% {
-          box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      @keyframes fade {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
         }
-        50% {
-          box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
-        }
-        100% {
-          box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
       }
     </style>
@@ -41,11 +40,6 @@
         </p>
 
         <p class="fs-4">И если этот месяц будет таким же тёплым, как ты — он уже идеален.</p>
-        <p class="fs-4">А также ровно год назад было сделано это фото ♥️</p>
-        <p class="fs-4">Пусть оно будет одним из первых в нашем путешествии сквозь жизнь вдвоем!</p>
-        <div class="d-flex justify-content-center">
-          <img src="../assets/img/pic-day1.jpg" style="z-index: 1000; width: 50%; height: 50%" />
-        </div>
       </div>
     </div>
     <div class="text-center mt-4">

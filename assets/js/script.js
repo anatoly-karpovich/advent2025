@@ -1,5 +1,5 @@
 const today = new Date();
-const currentDay = today.getDate(); // 1 декабря → 1
+const currentDay = today.getDate() + 100; // 1 декабря → 1
 
 document.querySelectorAll(".gift-box").forEach((box) => {
   const day = parseInt(box.dataset.day);
